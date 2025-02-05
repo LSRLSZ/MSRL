@@ -1,0 +1,25 @@
+# Core dependencies
+torch>=2.0.1                   # PyTorch base library (CUDA version should match your system)
+torch-geometric>=2.3.0         # PyTorch Geometric for graph neural networks
+torch-scatter>=2.1.1           # Required by PyTorch Geometric
+torch-sparse>=0.6.17           # Required by PyTorch Geometric
+torch-cluster>=1.6.0           # Required by PyTorch Geometric
+torch-spline-conv>=1.2.2       # Required by PyTorch Geometric
+
+# Numerical computing & data processing
+numpy>=1.24.3                  # Numerical operations
+pandas>=2.0.3                  # Data manipulation and CSV processing
+scikit-learn>=1.3.0            # Metrics calculation (F1, AUC, etc.)
+
+# Utilities
+tqdm>=4.65.0                   # Progress bars for training loops
+pathlib>=1.0.1                 # Path handling (included in Python 3.4+ but specified for clarity)
+
+# Optional (uncomment if needed)
+# matplotlib>=3.7.1            # For visualization (not required in core code)
+# networkx>=3.1                # For graph analysis (not required in core code)
+
+# How to install PyTorch with CUDA (example for CUDA 11.8):
+# pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+# Then install PyTorch Geometric dependencies:
+# pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-2.0.1+cu118.html
